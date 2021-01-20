@@ -35,17 +35,28 @@ class ImdbSpider(scrapy.Spider):
         item = MovieItem()
 
         item['title'] = response.xpath('//*[@id="title-overview-widget"]//div[@ class="title_wrapper"]/h1/text()').get() 
+        
         item['rating'] = response.xpath('//*[@id="title-overview-widget"]//span[@itemprop="ratingValue"]/text()').get()
+        
         item['metascore'] =  response.xpath('//*[@id="title-overview-widget"]//div[@class="titleReviewBarItem"]/a/div/span/text()').get()
+        
         # duration 字串需要 pipeline 处理
         item['duration'] = response.css('.subtext').css('time::text').get()
+        
         # genres 字串需要 strip 以及合并处理 
         item['genres'] = response.xpath('//*[@id="titleStoryLine"]/div[./h4/text()="Genres:"]/a/text()').getall() 
+        
+        # summary 字串需要 strip 处理
+        item['summary'] = response.xpath('//*[@id="title-overview-widget"]//div[@class="summary_text"]/text()').get()
+        
         item['director'] = response.css('.credit_summary_item').css('a::text').get()
+        
         # stars 字串需要合并以及抛弃最后一个元素  
         item['stars'] = response.xpath('//*[@id="title-overview-widget"]//div[./h4/text()="Stars:"]/a/text()').getall()
+        
         # cwg 需要取第二个元素 
         item['cumulative_worldwide_gross'] = response.xpath('//*[@id="titleDetails"]/div[./h4/text()="Cumulative Worldwide Gross:"]/text()').getall() 
 
         item['release_date'] = response.xpath('//*[@id="titleYear"]/a/text()').get()
+        
         return item
