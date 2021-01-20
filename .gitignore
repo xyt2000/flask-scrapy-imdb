@@ -127,5 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 
 mysql.json
+=======
+mysql.json
+.vscode
+>>>>>>> 0b99b30fca6982c6510dbcd83b42fdcc383eb6fc
