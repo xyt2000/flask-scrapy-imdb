@@ -11,10 +11,10 @@ def getJobTypeSalary():
     return jsonify(data)
     pass
 
-@datacontroller.route('/getcityjobcount', methods=['GET', 'POST'])
-def getCityJobCount():
-    # 方法接受的是AJAX请求
-    jobDao = JobDao()
-    data = jobDao.statisticCityJobCount()
-    return jsonify(data)
-    pass
+# @datacontroller.route('/getcityjobcount', methods=['GET', 'POST'])
+# def getCityJobCount():
+#     # 方法接受的是AJAX请求
+#     jobDao = JobDao()
+#     data = jobDao.statisticCityJobCount()
+#     return jsonify(data)
+#     pass

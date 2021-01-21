@@ -3,6 +3,8 @@ from datetime import timedelta
 from dao.userdao import UserDao
 from controller.datacontroller import datacontroller
 from controller.jobcontroller import jobcontroller
+from controller.imdbcontroller import imdbcontroller
+from dao.imdbdao import ImdbDao
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -10,10 +12,40 @@ app.config['SECRET_KEY'] = "FLASKTESTPROJECT"
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30) # SESSION的超时时间
 app.register_blueprint(datacontroller)
 app.register_blueprint(jobcontroller)
+app.register_blueprint(imdbcontroller)
 
-@app.route('/')
+@app.route('/index',methods=['GET', 'POST'])
 def index():
-    return render_template('login.html')
+    imdbDao=ImdbDao()
+    paramDict={}
+
+    if paramDict.get('pageSize') == None or paramDict.get('currentPage') == None:
+        paramDict['pageSize'] = 10
+        paramDict['currentPage'] = 1
+        pass
+
+    if not paramDict.get('searchName'):
+        paramDict['searchName'] = ""
+        pass
+
+    searhName = request.form.get('searchName')
+    pageSize = request.form.get('pageSize')
+    currentPage = request.form.get('currentPage')
+    paramDict['searchName'] = searhName
+    paramDict['pageSize'] = int(pageSize)
+    paramDict['currentPage'] = int(currentPage)
+
+    imdbList = imdbDao.getImdbPage(paramDict)
+    counts = imdbDao.getImdbCounts(paramDict).get("counts")
+    # 计算总共有多少页
+    totalPage = int(counts // paramDict.get('pageSize')) if counts % paramDict.get('pageSize') == 0 else int(counts // paramDict.get('pageSize'))+1
+
+    paramDict['totalPage'] = totalPage
+    paramDict['counts'] = counts
+    return render_template('index1.html',imdbList=imdbList, paramDict=paramDict)
+
+
+
 
 @app.route('/dashboard')
 def dashboard():
@@ -89,7 +121,7 @@ def login():
         userName = request.form['userName']
         userPwd  = request.form['userPwd']
         user = userDao.getUserByUserName(userName)
-        if user and user.get('userpwd') == userPwd:
+        if user and user.get('password') == userPwd:
             # 请求转发
             return render_template('dashboard.html', name=userName)
         else:

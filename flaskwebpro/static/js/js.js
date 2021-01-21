@@ -15,17 +15,16 @@ function echarts_1() {
         yData = []
         $.ajax({
             type: 'post',                            // post请求
-            url: '/getjobtypesalary',
+            url: '/getgenrecounts',
             dataType: 'json',
             data:{},
             error: function(xhr, err){
                 alert('请求失败，请检查，' + err + '!')
             },
             success: function(data) {   // data是javascript的json格式
-                alert("请求成功")
                 for(i=0;i<data.length;i++){
-                    xData[i]=data[i].jobtype
-                    yData[i]=Number.parseInt(data[i].s)
+                    xData[i]=data[i].genres
+                    yData[i]=Number.parseInt(data[i].num)
                 }
 
                          // 基于准备好的dom，初始化echarts实例
@@ -317,54 +316,62 @@ function echarts_5() {
     }
 	
 function echarts_4() {
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echart4'));
+    // AJAX加载数据：异步的Javascript and xml
+    Data={}
+    $.ajax({
+        type: 'post',                            // post请求
+        url: '/getyearcounts',
+        dataType: 'json',
+        data: {},
+        error: function (xhr, err) {
+            alert('请求失败，请检查，' + err + '!')
+        },
+        success: function (data) {   // data是javascript的json格式
+            console.log(data)
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('echart4'));
 
-        option = {
-    title: {
-        text: '不同职位数量对比',
-        left: 'center'
-    },
-    tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b} : {c} ({d}%)'
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Java', '大数据', 'Python', '人工智能', 'Web']
-    },
-    series: [
-        {
-            name: '访问来源',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value: 335, name: 'Java'},
-                {value: 310, name: '大数据'},
-                {value: 234, name: 'Python'},
-                {value: 135, name: '人工智能'},
-                {value: 1548, name: 'Web'}
-            ],
-            emphasis: {
-                itemStyle: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(ee, ee, ee, 0.5)'
-                }
-            }
+            option = {
+                title: {
+                    text: '不同职位数量对比',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} {b} ({d}%)'
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data:'' ,
+                },
+                series: [
+                    {
+                        name: '访问来源',
+                        type: 'pie',
+                        radius: '55%',
+                        center: ['50%', '60%'],
+                        data:  data,
+                        emphasis: {
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(ee, ee, ee, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            };
+
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            window.addEventListener("resize", function () {
+                myChart.resize();
+            });
         }
-    ]
-};
-
-      
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-        window.addEventListener("resize",function(){
-            myChart.resize();
-        });
-    }
+    });
+}
 function echarts_6() {
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('echart6'));
