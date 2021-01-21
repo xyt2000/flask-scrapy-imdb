@@ -5,12 +5,21 @@
 
 
 # useful for handling different item types with a single interface
+import scrapy
 from itemadapter import ItemAdapter
 from imdb.dao.moviedao import MovieDao
+from scrapy.pipelines.images import ImagesPipeline
 
 
-class ImdbPipeline:
-    def process_item(self, item, spider):
+class ImdbPipeline(ImagesPipeline):
+    
+    # 获取图片
+    def get_media_requests(self, item, info):
+        if item['poster_url']:
+            yield scrapy.Request(item['poster_url'])
+
+    # 获取图像后处理 item
+    def item_completed(self, results, item, info):
         movieDao = MovieDao()
 
         # title 处理
@@ -49,14 +58,26 @@ class ImdbPipeline:
 
         # recommendation 处理
         if item['genres'] or item['director'] or item['stars'] or item['summary']:
-            temp_recommendation = [item['genres'], item['director'], item['stars'], item['summary']]
+            temp_recommendation = [
+                item['genres'], item['director'], item['stars'], item['summary']]
             item['recommendation'] = '\n'.join(temp_recommendation)
+
+        # poster_process_result 处理
+        # Sample Result for [result['path'] for success, result in results if success][0] : 'full/c49df2c02681d20cb689f44a8ea5f70eb532c240.jpg'
+        poster_localpath = "imdb/" +[result['path'] for success, result in results if success][0]
+        
+        
+
+        # if item['poster_process_result'] and item['poster_process_result'][0]:
+        #     poster_localpath = 'imdb/' + item['poster_process_result'][0]['path']
+        #     item['poster_url'] = item['poster_process_result'][0]['url']
+        
 
         # print('参数:',item)
 
-        params = [item['title'], item['rating'], item['metascore'],
-                  item['duration'], item['genres'], item['summary'], item['director'], item['stars'],
-                  item['cumulative_worldwide_gross'], item['release_date'], item['recommendation'],item['poster_url']]
+        params = [item['title'], item['rating'], item['metascore'], item['duration'], item['genres'],
+                  item['summary'], item['director'], item['stars'], item['cumulative_worldwide_gross'],
+                  item['release_date'], item['recommendation'], item['poster_url'], poster_localpath]
 
         result = movieDao.insertMovieData(params)
         if result > 0:

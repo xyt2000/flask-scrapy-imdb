@@ -59,6 +59,7 @@ class ImdbSpider(scrapy.Spider):
 
         item['release_date'] = response.xpath('//*[@id="titleYear"]/a/text()').get()
 
-        item['poster_url'] = response.xpath('//*[@id="title-overview-widget"]//div[@class="poster"]/a/img/@src').get()
+        # ImagePipeline 接受 list 类型的 url
+        item['poster_url'] = response.xpath('//*[@id="title-overview-widget"]//div[@class="poster"]/a/img/@src').get()      
         
         return item

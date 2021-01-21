@@ -64,7 +64,13 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'imdb.pipelines.ImdbPipeline': 300,
+   # 'scrapy.pipelines.images.ImagesPipeline': 1,
 }
+
+IMAGES_STORE = './posters'
+# IMAGES_URLS_FIELD = 'poster_url'
+# IMAGES_RESULT_FIELD = 'poster_process_result'
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
