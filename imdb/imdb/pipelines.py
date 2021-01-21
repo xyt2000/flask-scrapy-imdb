@@ -56,7 +56,7 @@ class ImdbPipeline:
 
         params = [item['title'], item['rating'], item['metascore'],
                   item['duration'], item['genres'], item['summary'], item['director'], item['stars'],
-                  item['cumulative_worldwide_gross'], item['release_date'], item['recommendation']]
+                  item['cumulative_worldwide_gross'], item['release_date'], item['recommendation'],item['poster_url']]
 
         result = movieDao.insertMovieData(params)
         if result > 0:

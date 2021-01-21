@@ -18,6 +18,7 @@ class MovieItem(scrapy.Item):
     cumulative_worldwide_gross = scrapy.Field()
     release_date = scrapy.Field()
     recommendation = scrapy.Field()
+    poster_url = scrapy.Field()
 
 
     # number_of_vote = scrapy.Field()

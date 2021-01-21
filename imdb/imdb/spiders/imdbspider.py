@@ -58,5 +58,7 @@ class ImdbSpider(scrapy.Spider):
         item['cumulative_worldwide_gross'] = response.xpath('//*[@id="titleDetails"]/div[./h4/text()="Cumulative Worldwide Gross:"]/text()').getall() 
 
         item['release_date'] = response.xpath('//*[@id="titleYear"]/a/text()').get()
+
+        item['poster_url'] = response.xpath('//*[@id="title-overview-widget"]//div[@class="poster"]/a/img/@src').get()
         
         return item
