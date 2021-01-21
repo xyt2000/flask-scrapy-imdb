@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>系统首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="MyraStudio" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/static/assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <!-- ========== Left Sidebar Start ========== -->
+        {% include "left.html" %}
+        <!-- Left Sidebar End -->
+
+        {% include "top.html" %}
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-size-18">用户管理</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">系统管理</a></li>
+                                        <li class="breadcrumb-item active">用户管理</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                     <div class="row">
+                        <div class="col-12">
+                             <div class="card">
+                                <div class="card-body">
+                                <form action="/user" method="post" name="searhForm">
+                                    <p class="card-subtitle mb-4">
+                                        <input type="hidden" name="opr" value="search" />
+                                        <input type="hidden" name="pageSize" value="{{ paramDict.get('pageSize') }}" />
+                                        <input type="hidden" name="currentPage" value="{{ paramDict.get('currentPage') }}" />
+                                        <input type="hidden" name="counts" value="{{ paramDict.get('counts') }}" />
+                                        <input type="hidden" name="totalPage" value="{{ paramDict.get('totalPage') }}" />
+                                        用户名：<input type="text" name="searchName"  class="form-control" style="width: 200px;display: inline;" value="{{ paramDict.get('searchName') }}" />
+                                        <button type="submit" class="btn btn-primary btn-sm">查询</button>
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addUserModal">添加</button>
+                                    </p>
+                                    <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>用户ID</th>
+                                                <th>用户名</th>
+                                                <th>真实姓名</th>
+                                                <th>年龄</th>
+                                                <th>手机号</th>
+                                                <th>邮箱</th>
+                                                <th>余额</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for user in userList %}
+                                            <tr>
+                                                <td>{{ user.get('id') }}</td>
+                                                <td>{{ user.get('username') }}</td>
+                                                <td>{{ user.get('realname') }}</td>
+                                                <td>{{ user.get('age') }}</td>
+                                                <td>{{ user.get('phoneno') }}</td>
+                                                <td>{{ user.get('email') }}</td>
+                                                <td>{{ user.get('money') }}</td>
+                                                <td>
+                                                    {% if user.get('status') == 1 %}
+                                                        正常
+                                                    {% else %}
+                                                        锁定
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-danger btn-sm" onclick="disableUser({{ user.get('id') }})">禁用</button>
+                                                    <button onclick="update({{ user.get('id') }},'{{ user.get('username') }}','{{ user.get('phoneno') }}', '{{ user.get('email') }}')" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#updateUserModal">修改</button>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                            <tr>
+                                                <td colspan="10" align="right">
+                                                    总共有{{ paramDict.get('counts') }}条  总共{{ paramDict.get('totalPage') }}页  当前第{{ paramDict.get('currentPage') }}页
+                                                    <button type="button" class="btn btn-light btn-sm" onclick="changePage('first')">首页</button>
+                                                    <button type="button" class="btn btn-light btn-sm" onclick="changePage('pre')">上一页</button>
+                                                    <button type="button" class="btn btn-light btn-sm" onclick="changePage('next')">下一页</button>
+                                                    <button type="button" class="btn btn-light btn-sm" onclick="changePage('last')">尾页</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                </div> <!-- end card body-->
+                            </div> <!-- end card -->
+                        </div><!-- end col-->
+                    </div>
+                    <!-- end row -->
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            {% include "bottom.html" %}
+
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Overlay-->
+    <div class="menu-overlay"></div>
+
+
+    <!-- jQuery  -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/metismenu.min.js"></script>
+    <script src="/static/assets/js/waves.js"></script>
+    <script src="/static/assets/js/simplebar.min.js"></script>
+
+    <!-- Morris Js-->
+    <script src="../plugins/morris-js/morris.min.js"></script>
+    <!-- Raphael Js-->
+    <script src="../plugins/raphael/raphael.min.js"></script>
+
+    <!-- Morris Custom Js-->
+    <script src="/static/assets/pages/dashboard-demo.js"></script>
+
+    <!-- App js -->
+    <script src="/static/assets/js/theme.js"></script>
+ <!-- Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">添加用户</h5>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/user" method="post" name="addForm">
+                    <input type="hidden" name="opr" value="add">
+                    <div class="form-group">
+                        <label for="userName">用户名：</label>
+                        <input type="text" name="userName" class="form-control" placeholder="" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneno">手机号：</label>
+                        <input type="text" name="phoneno" class="form-control" value="" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">邮箱：</label>
+                        <input type="email" name="email" class="form-control"  placeholder="" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">取消</button>
+                <button onclick="add()" type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="updateUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">修改用户</h5>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/user" method="post" name="updateForm">
+                    <input type="hidden" name="opr" value="update">
+                    <input type="hidden" name="id">
+                    <div class="form-group">
+                        <label for="userName">用户名：</label>
+                        <input type="text" disabled name="userName" class="form-control" placeholder="" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneno">手机号：</label>
+                        <input type="text" name="phoneno" class="form-control" value="" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">邮箱：</label>
+                        <input type="email" name="email" class="form-control"  placeholder="" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">取消</button>
+                <button onclick="submitUpdate()" type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function add() {
+        document.addForm.submit()
+    }
+    function disableUser(id) {
+        // javascript实现超链接访问
+        document.location.href="/user?id=" + id + "&opr=disable"
+    }
+    function update(id, username, phoneno, email){
+        document.updateForm.id.value=id
+        document.updateForm.userName.value=username
+        document.updateForm.phoneno.value=phoneno
+        document.updateForm.email.value=email
+    }
+    function submitUpdate(){
+        document.updateForm.submit()
+    }
+    function changePage(opr) {
+        currentPage = Number.parseInt(document.searhForm.currentPage.value)
+        totalPage = Number.parseInt(document.searhForm.totalPage.value)
+        pageSize = document.searhForm.pageSize.value
+        if( opr == 'first'){
+            document.searhForm.currentPage.value = 1
+        }else if(opr == 'pre'){
+            document.searhForm.currentPage.value = (currentPage == 1?1:currentPage-1)
+        }else if(opr == "next"){
+            document.searhForm.currentPage.value = (currentPage == totalPage? totalPage:currentPage+1)
+        }else if(opr == "last"){
+            document.searhForm.currentPage.value = totalPage
+        }
+        document.searhForm.submit()
+    }
+</script>
+</body>
+
+</html>
