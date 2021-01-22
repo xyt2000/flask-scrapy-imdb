@@ -22,6 +22,20 @@ def index1():
 def index():
     imdbDao=ImdbDao()
     paramDict={}
+    if request.method == "POST":
+        searhName = request.form.get('searchName')
+        pageSize = request.form.get('pageSize')
+        currentPage = request.form.get('currentPage')
+        paramDict['searchName'] = searhName
+        if pageSize==None and currentPage==None:
+            paramDict['pageSize'] = pageSize
+            paramDict['currentPage'] = currentPage
+        else:
+            paramDict['pageSize'] = int(pageSize)
+            paramDict['currentPage'] = int(currentPage)
+
+    else:
+        pass
 
     if paramDict.get('pageSize') == None or paramDict.get('currentPage') == None:
         paramDict['pageSize'] = 10
@@ -32,12 +46,8 @@ def index():
         paramDict['searchName'] = ""
         pass
 
-    searhName = request.form.get('searchName')
-    pageSize = request.form.get('pageSize')
-    currentPage = request.form.get('currentPage')
-    paramDict['searchName'] = searhName
-    paramDict['pageSize'] = int(pageSize)
-    paramDict['currentPage'] = int(currentPage)
+
+
 
     imdbList = imdbDao.getImdbPage(paramDict)
     counts = imdbDao.getImdbCounts(paramDict).get("counts")
@@ -127,7 +137,7 @@ def login():
         user = userDao.getUserByUserName(userName)
         if user and user.get('password') == userPwd:
             # 请求转发
-            return render_template('dashboard.html', name=userName)
+            return render_template('index1.html', name=userName)
         else:
             return "登录失败"
         pass

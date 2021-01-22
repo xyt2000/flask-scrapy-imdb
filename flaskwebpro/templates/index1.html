@@ -14,12 +14,12 @@
 
 <link rel="stylesheet" href="../css/blog.css">
     <meta charset="UTF-8">
-    <title>画作交易(购买)</title>
+    <title>imdb</title>
 
 
 </head>
 <body style="
-   background:url(../img/bk-img.jpg)  no-repeat center center;
+   background:url({{ url_for('static', filename='images/background.jpg') }})  no-repeat center center;
    background-size:cover;
    background-attachment:fixed;
    background-color:#CCCCCC;
@@ -100,6 +100,7 @@
             </header>
 <div style="width: 100%;height: 1000px;margin: 0 auto;)">
     <br>
+   <form action="/index" method="post" name="searhForm">
     <div class="container-fluid" >
         <div class="row">
             <div class="col-md-2"><select class="form-control" >
@@ -119,16 +120,16 @@
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-xl-7" style="margin-left: 130px">
-                <span><a href="#"> 水墨画</a></span>&nbsp;&nbsp;&nbsp;
-                <span><a href="#"> 抽象画</a></span>&nbsp;&nbsp;&nbsp;
-                <span><a href="#"> 油画</a></span>&nbsp;&nbsp;&nbsp;
-                <span><a href="#"> 素描</a></span>&nbsp;&nbsp;&nbsp;
+                <span><a href="#"> </a></span>&nbsp;&nbsp;&nbsp;
+                <span><a href="#"> </a></span>&nbsp;&nbsp;&nbsp;
+                <span><a href="#"> </a></span>&nbsp;&nbsp;&nbsp;
+                <span><a href="#"> </a></span>&nbsp;&nbsp;&nbsp;
             </div>
         </div>
     </div>
     <br>
     <br>
-   <form action="/index" method="post" name="searhForm">
+
                                     <p class="card-subtitle mb-4">
                                         <input type="hidden" name="opr" value="search" />
                                         <input type="hidden" name="pageSize" value="{{ paramDict.get('pageSize') }}" />
@@ -140,12 +141,24 @@
                                     <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
                                         <thead>
                                             <tr>
+                                                 <th>电影名</th>
+                                                <th>星级</th>
+                                                <th>时长</th>
+                                                <th>演员</th>
+                                                <th>导演</th>
+                                                <th>发布日期</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                                 {% for imdb in imdbList %}
                                                     <tr>
-                                                       <td>{{ imdb.get('title') }}</td>
+                                                       <td>{{ imdb.get('title') }}<img src="/static/{{ imdb.get('title') }}"></td>
+                                                       <td>{{ imdb.get('rating') }}</td>
+                                                       <td>{{ imdb.get('duration') }}</td>
+                                                       <td>{{ imdb.get('stars') }}</td>
+                                                        <td>{{ imdb.get('director') }}</td>
+                                                        <td>{{ imdb.get('release_date') }}</td>
+
                                                     </tr>
                                                 {% endfor %}
                                             <tr>
