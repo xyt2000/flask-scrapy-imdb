@@ -41,4 +41,28 @@ class ImdbDao(BaseDao):
         return self.fetchall()
         pass
 
+    def statisticRateCounts(self):
+        sql="select rating,count(*) as s from imdb_data group by rating"
+        self.execute(sql,ret='dict')
+        return self.fetchall()
+        pass
+
+    def statisticMetaScoreCounts(self):
+        sql = "select metascore,count(*) as s from imdb_data group by metascore"
+        self.execute(sql, ret='dict')
+        return self.fetchall()
+        pass
+
+    def statisticDurationCounts(self):
+        sql = "select duration,count(*) as s from imdb_data group by duration"
+        self.execute(sql, ret='dict')
+        return self.fetchall()
+        pass
+
+    def statisticTop5(self):
+        sql="select * from (select * from imdb_data order by cumulative_worldwide_gross DESC) as a limit 5"
+        self.execute(sql,ret='dict')
+        return self.fetchall()
+        pass
+
     pass

@@ -14,6 +14,10 @@ app.register_blueprint(datacontroller)
 app.register_blueprint(jobcontroller)
 app.register_blueprint(imdbcontroller)
 
+@app.route("/")
+def index1():
+    return render_template("login.html")
+
 @app.route('/index',methods=['GET', 'POST'])
 def index():
     imdbDao=ImdbDao()
