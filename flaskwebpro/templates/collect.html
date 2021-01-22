@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>系统首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="MyraStudio" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/static/assets/images/favicon.ico">
+    <!-- App css -->
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+<body style="
+   background:url(/static/images/2.jpg)  no-repeat center center;
+   background-size:cover;
+   background-attachment:fixed;
+   background-color:#CCCCCC;
+   font-family: 华文楷体;">
+<header class="blog-header py-3" style="background-color:white">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-4 pt-1">
+
+                    </div>
+                    <div class="col-4 text-center">
+                        <a class="blog-header-logo text-dark" href="#">Imdb Studio</a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center">
+                        <a class="text-muted" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+                        </a>
+                        <a class="btn btn-sm btn-outline-secondary" href="登录.html">登录</a>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light" style="font-size: 20px">
+                    <a class="navbar-brand" href="封页.html" >PStuido</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto justify-content-center">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="main.html" >recommendation<span class="sr-only">(current)</span></a>
+                            </li>&nbsp;
+                            <li class="nav-item">
+                                <a class="nav-link" href="index1.html">imdb top1000</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="collect.html">my collections</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </header>
+<div style="width: 100%;height: 1000px;margin: 0 auto;)">
+                <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>poster</th>
+                                                <th>title</th>
+                                                <th>rating</th>
+                                                <th>duration</th>
+                                                <th>genres</th>
+                                                <th>director</th>
+                                                <th>stars</th>
+                                                <th>cumulative_worldwide_gross</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for movie in movieList %}
+                                            <tr>
+                                                <td> <img src = {{movie.get('poster_url')}} style="width: 50px;height: 50px"></td>
+                                                <td>{{ movie.get('title') }}</td>
+                                                <td>{{ movie.get('rating') }}</td>
+                                                <td>{{ movie.get('duration') }}</td>
+                                                <td>{{ movie.get('genres') }}</td>
+                                                <td>{{ movie.get('director') }}</td>
+                                                <td>{{ movie.get('stars') }}</td>
+                                                <td>{{ movie.get('cumulative_worldwide_gross') }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery  -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/metismenu.min.js"></script>
+    <script src="/static/assets/js/waves.js"></script>
+    <script src="/static/assets/js/simplebar.min.js"></script>
+    <!-- Morris Js-->
+    <script src="../plugins/morris-js/morris.min.js"></script>
+    <!-- Raphael Js-->
+    <script src="../plugins/raphael/raphael.min.js"></script>
+    <!-- Morris Custom Js-->
+    <script src="/static/assets/pages/dashboard-demo.js"></script>
+    <!-- App js -->
+    <script src="/static/assets/js/theme.js"></script>
+</body>
+</html>

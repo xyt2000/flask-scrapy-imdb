@@ -105,8 +105,6 @@ def collect():
     for MovieId in collectMovie:
         recommenMovie = movieDao.getMovieById(MovieId)
         collectList.append(recommenMovie)
-
-
     return render_template('collect.html',userName = userName,movieList = collectList)
 
 if __name__ == '__main__':
