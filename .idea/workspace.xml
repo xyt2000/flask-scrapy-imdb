@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="453df066-a476-4622-a169-d4a653a9588f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/Pagination.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/controller/rdController.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/dao/basedao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/dao/moviedao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/dao/recommendationdao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/dao/userDao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/recommendationOfUser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/css/icons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/css/theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/fonts/boxicons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/404-error.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/500-error.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/flags/germany.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/flags/italy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/flags/russia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/flags/spain.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/flags/us.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/logo-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/logo-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/maintenance.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/media/sm-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/media/sm-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/media/sm-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/media/sm-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/media/sm-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/media/sm-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/media/sm-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/team/team-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/images/users/avatar-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/js/metismenu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/js/simplebar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/js/waves.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/advanced-plugins-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/calendar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/chartjs-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/dashboard-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/fileuploads-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/fontawesome.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/google-chart-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/knob-chart-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/mask-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/materialdesign.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/morris-chart-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/quilljs-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/sparklines-chart-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/sweet-alert-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/validation-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/assets/pages/vectormap-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/css/comon0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/font/DS-DIGIT.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/head_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/jt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/lbx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/images/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/js/area_echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/js/china.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/js/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/static/js/js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/templates/collect.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendationDemo/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation/recommedation.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommedation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation/recommendationOfUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendationOfUser.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/flask_scrapy_imdb$recommendationOfUser.coverage" NAME="recommendationOfUser Coverage Results" MODIFIED="1611214354224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation" />
+    <SUITE FILE_PATH="coverage/flask_scrapy_imdb$app.coverage" NAME="app Coverage Results" MODIFIED="1611300305416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendationDemo" />
+    <SUITE FILE_PATH="coverage/flask_scrapy_imdb$test.coverage" NAME="test Coverage Results" MODIFIED="1611237884009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/flaskwebpro/dao/mysql.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/basedao.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/templates/collect.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/mysql.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/controller/rdController.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/recommendationdao.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-77" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/userDao.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/recommendationOfUser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendationDemo/templates/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/recommendation/recommedation.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/dao/moviedao.py" />
+        <option value="$PROJECT_DIR$/recommendation/test.py" />
+        <option value="$PROJECT_DIR$/recommendation/recommendationOfUser.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/Pagination.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/controller/recommendController.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/controller/rdController.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/recommendationOfUser.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/dao/userDao.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/dao/basedao.py" />
+        <option value="$PROJECT_DIR$/recommendationDemo/templates/main.html" />
+        <option value="$PROJECT_DIR$/recommendationDemo/templates/collect.html" />
+        <option value="$PROJECT_DIR$/recommendationDemo/app.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="690" />
+    <option name="width" value="680" />
+    <option name="height" value="880" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
+              <item name="flaskwebpro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
+              <item name="flaskwebpro" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
+              <item name="flaskwebpro" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
+              <item name="flaskwebpro" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendationDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/flaskwebpro1" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xytbu\scrapy-imdb\flask-scrapy-imdb\flaskwebpro\dao" />
+      <recent name="C:\Users\xytbu\scrapy-imdb\flask-scrapy-imdb\recommendationDemo\static\images" />
+      <recent name="C:\Users\xytbu\scrapy-imdb\flask-scrapy-imdb\recommendationDemo\templates" />
+      <recent name="C:\Users\xytbu\scrapy-imdb\flask-scrapy-imdb\recommendationDemo" />
+      <recent name="C:\Users\xytbu\scrapy-imdb\flask-scrapy-imdb\recommendationDemo\dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flask-scrapy-imdb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendationDemo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendationDemo/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="recommendationOfUser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flask-scrapy-imdb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/recommendationOfUser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flask-scrapy-imdb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.recommendationOfUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="453df066-a476-4622-a169-d4a653a9588f" name="Default Changelist" comment="" />
+      <created>1611192812197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611192812197</updated>
+      <workItem from="1611192818508" duration="16988000" />
+      <workItem from="1611281582702" duration="12846000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29834000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17402945" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29733333" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40266666" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.39866668" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/imdb/Dump20210120_imdb_data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115038" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dump20210120.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1698">
+          <caret line="72" column="3441" selection-start-line="72" selection-start-column="3441" selection-end-line="72" selection-end-column="3443" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/dao/basedao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/dao/moviedao.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/dao/recommendationdao.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/dao/userDao.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/static/assets/js/theme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/mysql.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/static/images/loading.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/static/images/head_bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/static/images/jt.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/static/images/line.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/static/images/map.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/static/images/bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/test.py" />
+    <entry file="file://$PROJECT_DIR$/recommendation/recommedation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/moviedao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/recommendationOfUser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/Pagination.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1013">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/controller/recommendController.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/controller/rdController.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/recommendationdao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/mysql.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/userDao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/recommendationOfUser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/dao/basedao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/templates/collect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendationDemo/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskwebpro/dao/mysql.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>

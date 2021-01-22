@@ -5,7 +5,11 @@ import  jieba
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 import numpy as np
 import nltk
-import re
+
+"""
+@Author:XYT2000
+@Content:通过tfidf算法提取每部电影最相似的12部电影存入数据库
+"""
 
 nltk.download('punkt')
 movieDao = MovieDao()
