@@ -90,10 +90,11 @@ def collect():
     print(userName)
     userCollect = userDao.getcommendationByUsername(userName)
     print(userCollect)
-    collectMovie = userCollect['collectid'].split('-')
-    for MovieId in collectMovie:
-        recommenMovie = movieDao.getMovieById(MovieId)
-        collectList.append(recommenMovie)
+    if userCollect['collectid'] != None and userCollect['collectid'] != '':
+        collectMovie = userCollect['collectid'].split('-')
+        for MovieId in collectMovie:
+            recommenMovie = movieDao.getMovieById(MovieId)
+            collectList.append(recommenMovie)
     return render_template('collect.html',userName = userName,movieList = collectList)
 @app.route('/matplotlib.html', methods=['GET', 'POST'])
 def matplotlib():
@@ -182,7 +183,7 @@ def login():
             # 请求转发
             userCollect = userDao.getcommendationByUsername(userName)
             print(userCollect)
-            if userCollect['collectid'] != None:
+            if userCollect['collectid'] != None and userCollect['collectid'] != '':
                 movies= userCollect['collectid'].split('-')
                 movieList = getRecommendationByUser(userCollect)
                 num = len(movies)
@@ -209,7 +210,7 @@ def collectMovie():
     userDao = UserDao()
     id = request.args.get('id')
     userCollect = userDao.getcommendationByUsername(userName)
-    if userCollect['collectid'] != None:
+    if userCollect['collectid'] != None and userCollect['collectid'] != '':
         collectMovie = userCollect['collectid'].split('-')
         print(collectMovie)
         newCollect = userCollect['collectid']

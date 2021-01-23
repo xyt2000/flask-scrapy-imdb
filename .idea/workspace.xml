@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="453df066-a476-4622-a169-d4a653a9588f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flaskwebpro/rebody/Rebody.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flaskwebpro/rebody/imdb_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flaskwebpro/static/images/m1.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flaskwebpro/static/images/m2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flaskwebpro/static/images/m3.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flaskwebpro/static/images/m4.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flaskwebpro/templates/matplotlib.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flaskwebpro/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskwebpro/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskwebpro/templates/collect.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskwebpro/templates/collect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskwebpro/templates/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskwebpro/templates/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskwebpro/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskwebpro/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/recommedation.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommedation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flaskwebpro/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
+            <state relative-caret-position="107">
+              <caret line="93" column="58" lean-forward="true" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
               <folding>
                 <element signature="e#0#67#0" expanded="true" />
               </folding>
@@ -119,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imdb/imdb/spiders/imdbspider.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-224">
@@ -178,16 +166,16 @@
         <option value="$PROJECT_DIR$/recommendationDemo/app.py" />
         <option value="$PROJECT_DIR$/flaskwebpro/recommendationOfUser.py" />
         <option value="$PROJECT_DIR$/mysqldump/mysql.py" />
-        <option value="$PROJECT_DIR$/flaskwebpro/app.py" />
         <option value="$PROJECT_DIR$/flaskwebpro/templates/main.html" />
         <option value="$PROJECT_DIR$/flaskwebpro/templates/matplotlib.html" />
         <option value="$PROJECT_DIR$/flaskwebpro/templates/index1.html" />
         <option value="$PROJECT_DIR$/flaskwebpro/templates/collect.html" />
         <option value="$PROJECT_DIR$/recommendation/recommedation.py" />
+        <option value="$PROJECT_DIR$/flaskwebpro/app.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="690" />
     <option name="width" value="680" />
     <option name="height" value="880" />
@@ -206,52 +194,6 @@
             <path>
               <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="flaskwebpro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="flaskwebpro" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="flaskwebpro" type="462c0819:PsiDirectoryNode" />
-              <item name="rebody" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-scrapy-imdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-scrapy-imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -403,18 +345,17 @@
       <updated>1611192812197</updated>
       <workItem from="1611192818508" duration="16988000" />
       <workItem from="1611281582702" duration="21477000" />
-      <workItem from="1611366795857" duration="15932000" />
+      <workItem from="1611366795857" duration="17137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54397000" />
+    <option name="totallyTimeSpent" value="55602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2309237" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2309237" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -428,7 +369,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27466667" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5933333" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -682,16 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskwebpro/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskwebpro/static/images/m2.PNG">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -772,6 +703,16 @@
         <state relative-caret-position="-224">
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskwebpro/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="93" column="58" lean-forward="true" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
