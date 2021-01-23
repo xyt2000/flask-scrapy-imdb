@@ -53,5 +53,5 @@ for t in range(len(movieList)):
     print(params)
     recommendationDao.insertRecommend(params)
     recommendationDao.commit()
-    print("插入成功")
+
 

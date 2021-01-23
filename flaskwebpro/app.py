@@ -95,7 +95,9 @@ def collect():
         recommenMovie = movieDao.getMovieById(MovieId)
         collectList.append(recommenMovie)
     return render_template('collect.html',userName = userName,movieList = collectList)
-
+@app.route('/matplotlib.html', methods=['GET', 'POST'])
+def matplotlib():
+    return render_template('matplotlib.html')
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
