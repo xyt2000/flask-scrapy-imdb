@@ -206,8 +206,6 @@ def collectMovie():
     global userName
     userDao = UserDao()
     id = request.args.get('id')
-    print("movieid")
-    print(id)
     userCollect = userDao.getcommendationByUsername(userName)
     if userCollect['collectid'] != None:
         collectMovie = userCollect['collectid'].split('-')
